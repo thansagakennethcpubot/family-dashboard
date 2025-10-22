@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Our Family</h1>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="home" class="section active">
+            <h2>Welcome to Our Family Dashboard</h2>
+            <div class="family-members">
+                <div class="member-card">
+                    <div class="avatar">👨</div>
+                    <h3>Dad</h3>
+                    <p>Family Leader</p>
+                </div>
+                <div class="member-card">
+                    <div class="avatar">👩</div>
+                    <h3>Mom</h3>
+                    <p>Heart of the Home</p>
+                </div>
+                <div class="member-card">
+                    <div class="avatar">👤</div>
+                    <h3>Me</h3>
+                    <p>Family Member</p>
+                </div>
+                <div class="member-card">
+                    <div class="avatar">👧</div>
+                    <h3>Kate</h3>
+                    <p>Sister</p>
+                </div>
+                <div class="member-card">
+                    <div class="avatar">👦</div>
+                    <h3>Kael</h3>
+                    <p>Brother</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2>Family Gallery</h2>
+            <div class="gallery-controls">
+                <button class="btn" id="addPhotoBtn">+ Add Photo</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="photo-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="photo-placeholder">📷</div>
+                    <p>Family Vacation 2024</p>
+                </div>
+                <div class="photo-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="photo-placeholder">📷</div>
+                    <p>Birthday Party</p>
+                </div>
+                <div class="photo-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="photo-placeholder">📷</div>
+                    <p>Weekend Fun</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calendar" class="section">
+            <h2>Family Calendar</h2>
+            <div class="calendar-controls">
+                <button class="btn" id="addEventBtn">+ Add Event</button>
+            </div>
+            <div class="events-list" id="eventsList">
+                <div class="event-card">
+                    <div class="event-date">Oct 25</div>
+                    <div class="event-details">
+                        <h3>Family Dinner</h3>
+                        <p>🍽️ 7:00 PM - Celebrating Mom's promotion</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">Oct 28</div>
+                    <div class="event-details">
+                        <h3>Kate's Soccer Game</h3>
+                        <p>⚽ 4:00 PM - Regional Championship</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">Nov 02</div>
+                    <div class="event-details">
+                        <h3>Family Movie Night</h3>
+                        <p>🎬 8:00 PM - Pizza and movies!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Family</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-avatar">👨</div>
+                    <h3>Dad</h3>
+                    <p>📧 dad@family.com</p>
+                    <p>📱 (555) 123-4567</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-avatar">👩</div>
+                    <h3>Mom</h3>
+                    <p>📧 mom@family.com</p>
+                    <p>📱 (555) 123-4568</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-avatar">👤</div>
+                    <h3>Me</h3>
+                    <p>📧 me@family.com</p>
+                    <p>📱 (555) 123-4569</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-avatar">👧</div>
+                    <h3>Kate</h3>
+                    <p>📧 kate@family.com</p>
+                    <p>📱 (555) 123-4570</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-avatar">👦</div>
+                    <h3>Kael</h3>
+                    <p>📧 kael@family.com</p>
+                    <p>📱 (555) 123-4571</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <select required>
+                        <option value="">Select Family Member</option>
+                        <option value="dad">Dad</option>
+                        <option value="mom">Mom</option>
+                        <option value="me">Me</option>
+                        <option value="kate">Kate</option>
+                        <option value="kael">Kael</option>
+                    </select>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-btn active" data-section="home">
+            <span>🏠</span>
+            <span>Home</span>
+        </button>
+        <button class="nav-btn" data-section="gallery">
+            <span>📷</span>
+            <span>Gallery</span>
+        </button>
+        <button class="nav-btn" data-section="calendar">
+            <span>📅</span>
+            <span>Calendar</span>
+        </button>
+        <button class="nav-btn" data-section="contact">
+            <span>📞</span>
+            <span>Contact</span>
+        </button>
+    </nav>
+
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <h3>Add Photo</h3>
+            <input type="text" id="photoTitle" placeholder="Photo Title">
+            <input type="color" id="photoColor" value="#667eea">
+            <div class="modal-buttons">
+                <button class="btn" id="savePhoto">Add</button>
+                <button class="btn-secondary" id="cancelPhoto">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <h3>Add Event</h3>
+            <input type="text" id="eventTitle" placeholder="Event Title">
+            <input type="date" id="eventDate">
+            <input type="time" id="eventTime">
+            <input type="text" id="eventDescription" placeholder="Description">
+            <div class="modal-buttons">
+                <button class="btn" id="saveEvent">Add</button>
+                <button class="btn-secondary" id="cancelEvent">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
